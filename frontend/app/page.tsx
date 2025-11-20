@@ -11,7 +11,6 @@ export default function Home() {
   const [title, setTitle] = useState('');
   const [created, setCreated] = useState<any>(null);
   const { token } = useContext(UserContext);
-  redirect('/login');
 
   async function handleCreate(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
