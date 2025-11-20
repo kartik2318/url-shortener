@@ -19,7 +19,7 @@ router.get('/:shortId', async (req, res) => {
   // check for recent click from same IP + User-Agent in last 1 minute
   const { rows: recentRows } = await db.query(
     `SELECT id FROM clicks
-     WHERE link_id=$1 AND ip=$2 AND user_agent=$3 AND created_at > NOW() - INTERVAL '1 minute'`,
+     WHERE link_id=$1 AND ip=$2 AND user_agent=$3 AND clicked_at > NOW() - INTERVAL '1 minute'`,
     [link.id, ip, ua]
   );
 
