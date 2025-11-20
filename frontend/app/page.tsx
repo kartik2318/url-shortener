@@ -92,7 +92,7 @@ export default function Home() {
             target="_blank"
             rel="noreferrer"
           >
-            {`${process.env.NEXT_PUBLIC_BACKEND_URL}/r/${created.short_id}`}
+            {`${process.env.NEXT_PUBLIC_BACKEND_URL}/${created.short_id}`}
           </a>
 
           <p className="text-sm text-gray-600 mt-2 break-all">
