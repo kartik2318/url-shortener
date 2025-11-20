@@ -88,7 +88,7 @@ export default function Home() {
 
           <a
             className="text-blue-600 font-medium hover:underline break-all"
-            href={`${process.env.NEXT_PUBLIC_BACKEND_URL}/r/${created.short_id}`}
+            href={`${process.env.NEXT_PUBLIC_BACKEND_URL}/${created.short_id}`}
             target="_blank"
             rel="noreferrer"
           >
