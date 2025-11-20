@@ -2,13 +2,16 @@
 
 import { useState, useContext } from 'react';
 import { UserContext } from '@/utils/userContext';
+import { redirect } from 'next/navigation';
 import Link from 'next/link';
 
 export default function Home() {
+  
   const [longUrl, setLongUrl] = useState('');
   const [title, setTitle] = useState('');
   const [created, setCreated] = useState<any>(null);
   const { token } = useContext(UserContext);
+  redirect('/login');
 
   async function handleCreate(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
