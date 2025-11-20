@@ -77,6 +77,13 @@ export default function Home() {
             >
               My Dashboard
             </Link>
+
+            <Link
+            className="px-5 py-2.5 bg-green-600 hover:bg-green-700 text-white font-medium rounded-xl transition shadow-sm"
+            href="/login"
+            >
+              Login
+            </Link>
           </div>
         </form>
       </div>
