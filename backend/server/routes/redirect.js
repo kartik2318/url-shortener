@@ -4,7 +4,7 @@ const db = require('../db/db');
 const router = express.Router();
 
 // route: GET /r/:shortId  -> redirect
-router.get('/r/:shortId', async (req, res) => {
+router.get('/:shortId', async (req, res) => {
   const { shortId } = req.params;
   const { rows } = await db.query('SELECT id,long_url FROM links WHERE short_id=$1', [shortId]);
   const link = rows[0];

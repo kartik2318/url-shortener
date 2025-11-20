@@ -10,9 +10,15 @@ const linksRoutes = require('./routes/links');
 const redirectRoutes = require('./routes/redirect');
 
 const app = express();
+app.disable('x-powered-by');
 
-app.use(helmet());
-app.use(cors({ origin: 'http://localhost:3000', credentials: true }));
+app.use(helmet({
+    contentSecurityPolicy: false,
+  }));
+app.use(cors({
+    origin: process.env.FRONTEND_URL,
+    credentials: true,
+  }));
 app.use(express.json());
 app.use(morgan('dev'));
 
